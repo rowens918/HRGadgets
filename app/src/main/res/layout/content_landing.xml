@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LandingActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:showIn="@layout/landing_activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:gravity="center_horizontal"
+            android:hint="@string/employee_lookup_edittext_hint"
+            android:id="@+id/et_emp_id"/>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:id="@+id/bt_emp_id"
+            android:gravity="center"
+            android:text="@string/employee_lookup_button_label"/>
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_loading_indicator"
+        android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:id="@+id/bt_emp_all"
+        android:gravity="center"
+        android:text="@string/employee_list_button_label"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emp_lookup_card"
+        android:visibility="gone">
+        <include layout="@layout/employee_card" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/emp_list_container"
+        android:visibility="gone">
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="fill_horizontal"
+        android:paddingBottom="30dp">
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:text="@string/head_emp_id"/>
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:text="@string/head_emp_name"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/head_emp_salary"
+            android:paddingBottom="30dp"/>
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp">
+        <include layout="@layout/employee_list" />
+        </ScrollView>
+
+    </FrameLayout>
+
+
+</LinearLayout>

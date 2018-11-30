@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HRGadgets</string>
+
+    <!-- API URL Strings -->
+    <string name="all_employees_url">http://dummy.restapiexample.com/api/v1/employees</string>
+    <string name="employee_by_id_url">http://dummy.restapiexample.com/api/v1/employee/</string>
+
+    <!-- Labels -->
+    <string name="label_emp_id">Employee ID:</string>
+    <string name="label_emp_name">Employee Name:</string>
+    <string name="label_emp_salary">Employee Salary:</string>
+    <string name="label_emp_age">Employee Age:</string>
+
+    <!-- Headers -->
+    <string name="head_emp_id">ID</string>
+    <string name="head_emp_name">Name</string>
+    <string name="head_emp_salary">Salary</string>
+
+    <!-- Button Label Text -->
+    <string name="employee_lookup_button_label">Employee Lookup</string>
+    <string name="employee_list_button_label">All Employees</string>
+
+    <!-- Edit Text Hint String -->
+    <string name="employee_lookup_edittext_hint">Enter Employee ID</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_employee_list">Employees</string>
+    <string name="title_employee_detail">Employee Detail</string>
+</resources>
